@@ -23,3 +23,11 @@ pip install -r requirements.txt
 
 
 ## Model
+
+[🤗 Model on Huggingface](https://huggingface.co/Enigma-AI/multiverse)
+
+
+## Running the model
+
+* To control the silver car at the top screen use the arrow keys.
+* To control the blue car at the bottom use the WASD keys.
