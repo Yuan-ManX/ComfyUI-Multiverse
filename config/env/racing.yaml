@@ -1,0 +1,7 @@
+train:
+  id: racing
+  size: [700, 530]
+num_actions: 66
+path_data_low_res: null
+path_data_full_res: null
+keymap: racing
