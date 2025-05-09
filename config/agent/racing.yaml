@@ -1,0 +1,66 @@
+_target_: agent.AgentConfig
+
+denoiser:
+  _target_: models.diffusion.DenoiserConfig
+  sigma_data: 0.5
+  sigma_offset_noise: 0.1
+  noise_previous_obs: true
+  upsampling_factor: null
+  frame_sampling:
+    - count: 4
+      stride: 1
+    - count: 4
+      stride: 4
+  inner_model:
+    _target_: models.diffusion.InnerModelConfig
+    img_channels: 6
+    num_steps_conditioning: 8
+    cond_channels: 2048
+    depths:
+    - 2
+    - 2
+    - 2
+    - 2
+    channels:
+    - 128
+    - 256
+    - 512
+    - 1024
+    attn_depths:
+    - 0
+    - 0
+    - 1
+    - 1
+
+upsampler:
+  _target_: models.diffusion.DenoiserConfig
+  sigma_data: 0.5
+  sigma_offset_noise: 0.1
+  noise_previous_obs: false
+  upsampling_factor: 10
+  upsampling_frame_height: 350
+  upsampling_frame_width: 530
+  inner_model:
+    _target_: models.diffusion.InnerModelConfig
+    img_channels: 6
+    num_steps_conditioning: 0
+    cond_channels: 2048
+    depths:
+    - 2
+    - 2
+    - 2
+    - 2
+    channels:
+    - 64
+    - 64
+    - 128
+    - 256
+    attn_depths:
+    - 0
+    - 0
+    - 0
+    - 0
+  
+rew_end_model: null 
+
+actor_critic: null 
