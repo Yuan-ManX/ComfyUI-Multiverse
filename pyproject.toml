@@ -1,0 +1,15 @@
+[project]
+name = "multiverse"
+description = "Make Multiverse avialbe in ComfyUI.\nMultiverse: The First AI Multiplayer World Model. Two human players driving cars in Multiverse."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["gymnasium==0.29.1", "ale-py==0.9.0", "h5py==3.11.0", "huggingface-hub==0.17.2", "hydra-core==1.3", "numpy==1.26.0", "opencv-python==4.10.0.84", "pillow==10.3.0", "pygame==2.5.2", "torch==2.1.0", "torchvision==0.16.0", "torcheval==0.0.7", "tqdm==4.66.4", "wandb==0.17.0"]
+
+[project.urls]
+Repository = "https://github.com/Yuan-ManX/ComfyUI-Multiverse"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-Multiverse"
+Icon = ""
